@@ -32,3 +32,6 @@ title 可以随便起一个,将秘钥复制到key中,点击Add SSH key完成添�
  因为可能你的小伙伴更新过你们的远程厂库 
  git pull 如果出现 Already up-to-date.则说明你的项目是最新的. 然后在提交 git push -u origin master
 
+如果git remote add origin git@github.com:xxx/xxx.git
+提示出错信息：fatal: remote origin already exists. 或者 fatal: 远程 origin 已经存在
+解决办法：git remote rm origin
