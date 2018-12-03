@@ -35,3 +35,9 @@ title 可以随便起一个,将秘钥复制到key中,点击Add SSH key完成添�
 如果git remote add origin git@github.com:xxx/xxx.git
 提示出错信息：fatal: remote origin already exists. 或者 fatal: 远程 origin 已经存在
 解决办法：git remote rm origin
+
+git中出现sign_and_send_pubkey: signing failed: agent refused operation【已解决】
+sign_and_send_pubkey: signing failed: agentrefused operation这个问题。百思不得其解，后来在网上看到有人解决了，答案如下。
+
+eval "$(ssh-agent -s)"
+ssh-add
